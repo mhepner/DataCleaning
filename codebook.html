@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title></title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<p>+&mdash; </p>
+
+<p>+title: &ldquo;Codebook template&rdquo; </p>
+
+<p>+author: &ldquo;Your name here&rdquo; </p>
+
+<p>+date: &ldquo;The date here&rdquo; </p>
+
+<p>+output: </p>
+
+<ul>
+<li><p>html_document: </p></li>
+<li><p>keep_md: yes </p></li>
+</ul>
+
+<p>+&mdash; </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+## Project Description </p>
+
+<p>+Short description of the project </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+##Study design and data processing </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+###Collection of the raw data </p>
+
+<p>+Description of how the data was collected. </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+###Notes on the original (raw) data  </p>
+
+<p>+Some additional notes (if avaialble, otherwise you can leave this section out). </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+##Creating the tidy datafile </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+###Guide to create the tidy data file </p>
+
+<p>+Description on how to create the tidy data file (1. download the data, &hellip;)/ </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+###Cleaning of the data </p>
+
+<p>+Short, high-level description of what the cleaning script does. <a href="">link to the readme document that describes the code in greater detail</a> </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+##Description of the variables in the tiny_data.txt file </p>
+
+<p>+General description of the file including: </p>
+
+<ul>
+<li><ul>
+<li>Dimensions of the dataset </li>
+</ul></li>
+<li><ul>
+<li>Summary of the data </li>
+</ul></li>
+<li><ul>
+<li>Variables present in the dataset </li>
+</ul></li>
+<li></li>
+</ul>
+
+<p>+(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file) </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+###Variable 1 (repeat this section for all variables in the dataset) </p>
+
+<p>+Short description of what the variable describes. </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+Some information on the variable including: </p>
+
+<ul>
+<li><ul>
+<li>Class of the variable </li>
+</ul></li>
+<li><ul>
+<li>Unique values/levels of the variable </li>
+</ul></li>
+<li><ul>
+<li>Unit of measurement (if no unit of measurement list this as well) </li>
+</ul></li>
+<li><ul>
+<li>In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels).<br/></li>
+</ul></li>
+<li></li>
+</ul>
+
+<p>+(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file) </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+####Notes on variable 1: </p>
+
+<p>+If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out. </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+##Sources </p>
+
+<p>+Sources you used if any, otherise leave out. </p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>+##Annex </p>
+
+<p>+If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to &#39;hide&#39; as you do not want the results to show again) </p>
+
+</body>
+
+</html>
