@@ -1,163 +1,78 @@
-+--- 
-
-
-+title: "Codebook template" 
-
-
-+author: "Your name here" 
-
-
-+date: "The date here" 
-
-
-+output: 
-
-
-+  html_document: 
-
-
-+    keep_md: yes 
-
-
-+--- 
-
-
-+ 
-
-
-+## Project Description 
-
-
-+Short description of the project 
-
-
-+ 
-
-
-+##Study design and data processing 
-
-
-+ 
-
-
-+###Collection of the raw data 
-
-
-+Description of how the data was collected. 
-
-
-+ 
-
-
-+###Notes on the original (raw) data  
-
-
-+Some additional notes (if avaialble, otherwise you can leave this section out). 
-
-
-+ 
-
-
-+##Creating the tidy datafile 
-
-
-+ 
-
-
-+###Guide to create the tidy data file 
-
-
-+Description on how to create the tidy data file (1. download the data, ...)/ 
-
-
-+ 
-
-
-+###Cleaning of the data 
-
-
-+Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]() 
-
-
-+ 
-
-
-+##Description of the variables in the tiny_data.txt file 
-
-
-+General description of the file including: 
-
-
-+ - Dimensions of the dataset 
-
-
-+ - Summary of the data 
-
-
-+ - Variables present in the dataset 
-
-
-+ 
-
-
-+(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file) 
-
-
-+ 
-
-
-+###Variable 1 (repeat this section for all variables in the dataset) 
-
-
-+Short description of what the variable describes. 
-
-
-+ 
-
-
-+Some information on the variable including: 
-
-
-+ - Class of the variable 
-
-
-+ - Unique values/levels of the variable 
-
-
-+ - Unit of measurement (if no unit of measurement list this as well) 
-
-
-+ - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels).  
-
-
-+ 
-
-
-+(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file) 
-
-
-+ 
-
-
-+####Notes on variable 1: 
-
-
-+If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out. 
-
-
-+ 
-
-
-+##Sources 
-
-
-+Sources you used if any, otherise leave out. 
-
-
-+ 
-
-
-+##Annex 
-
-
-+If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again) 
+Code Book - Getting and Cleaning Data Project
+ID Fields
+subject - The Subject ID
+activity - One of the six activities listed below in Activity Labels
+timeBodyAccelerometer-mean()-X (Column 1)
+timeBodyAccelerometer-mean()-Y (Column 1)
+timeBodyAccelerometer-mean()-Z (Column 1)
+timeBodyAccelerometer-std()-X (Column 1)
+timeBodyAccelerometer-std()-Y (Column 1)
+timeBodyAccelerometer-std()-Z (Column 1)
+timeGravityAccelerometer-mean()-X (Column 1)
+timeGravityAccelerometer-mean()-Y (Column 1)
+timeGravityAccelerometer-mean()-Z (Column 1)
+timeGravityAccelerometer-std()-X (Column 1)
+timeGravityAccelerometer-std()-Y (Column 1)
+timeGravityAccelerometer-std()-Z (Column 1)
+timeBodyAccelerometerJerk-mean()-X (Column 1)
+timeBodyAccelerometerJerk-mean()-Y (Column 1)
+timeBodyAccelerometerJerk-mean()-Z (Column 1)
+timeBodyAccelerometerJerk-std()-X (Column 1)
+timeBodyAccelerometerJerk-std()-Y (Column 1)
+timeBodyAccelerometerJerk-std()-Z (Column 1)
+timeBodyGyroscope-mean()-X (Column 1)
+timeBodyGyroscope-mean()-Y (Column 1)
+timeBodyGyroscope-mean()-Z (Column 1)
+timeBodyGyroscope-std()-X (Column 1)
+timeBodyGyroscope-std()-Y (Column 1)
+timeBodyGyroscope-std()-Z (Column 1)
+timeBodyGyroscopeJerk-mean()-X (Column 1)
+timeBodyGyroscopeJerk-mean()-Y (Column 1)
+timeBodyGyroscopeJerk-mean()-Z (Column 1)
+timeBodyGyroscopeJerk-std()-X (Column 1)
+timeBodyGyroscopeJerk-std()-Y (Column 1)
+timeBodyGyroscopeJerk-std()-Z (Column 1)
+timeBodyAccelerometerMagnitude-mean() (Column 1)
+timeBodyAccelerometerMagnitude-std() (Column 1)
+timeGravityAccelerometerMagnitude-mean() (Column 1)
+timeGravityAccelerometerMagnitude-std() (Column 1)
+timeBodyAccelerometerJerkMagnitude-mean() (Column 1)
+timeBodyAccelerometerJerkMagnitude-std() (Column 1)
+timeBodyGyroscopeMagnitude-mean() (Column 1)
+timeBodyGyroscopeMagnitude-std() (Column 1)
+timeBodyGyroscopeJerkMagnitude-mean() (Column 1)
+timeBodyGyroscopeJerkMagnitude-std() (Column 1)
+frequencyBodyAccelerometer-mean()-X (Column 1)
+frequencyBodyAccelerometer-mean()-Y (Column 1)
+frequencyBodyAccelerometer-mean()-Z (Column 1)
+frequencyBodyAccelerometer-std()-X (Column 1)
+frequencyBodyAccelerometer-std()-Y (Column 1)
+frequencyBodyAccelerometer-std()-Z (Column 1)
+frequencyBodyAccelerometerJerk-mean()-X (Column 1)
+frequencyBodyAccelerometerJerk-mean()-Y (Column 1)
+frequencyBodyAccelerometerJerk-mean()-Z (Column 1)
+frequencyBodyAccelerometerJerk-std()-X (Column 1)
+frequencyBodyAccelerometerJerk-std()-Y (Column 1)
+frequencyBodyAccelerometerJerk-std()-Z (Column 1)
+frequencyBodyGyroscope-mean()-X (Column 1)
+frequencyBodyGyroscope-mean()-Y (Column 1)
+frequencyBodyGyroscope-mean()-Z (Column 1)
+frequencyBodyGyroscope-std()-X (Column 1)
+frequencyBodyGyroscope-std()-Y (Column 1)
+frequencyBodyGyroscope-std()-Z (Column 1)
+frequencyBodyAccelerometerMagnitude-mean() (Column 1)
+frequencyBodyAccelerometerMagnitude-std() (Column 1)
+frequencyBodyAccelerometerJerkMagnitude-mean() (Column 1)
+frequencyBodyAccelerometerJerkMagnitude-std() (Column 1)
+frequencyBodyGyroscopeMagnitude-mean() (Column 1)
+frequencyBodyGyroscopeMagnitude-std() (Column 1)
+frequencyBodyGyroscopeJerkMagnitude-mean() (Column 1)
+frequencyBodyGyroscopeJerkMagnitude-std() (Column 1)
+
+Activity Labels
+WALKING (value 1)
+WALKING_UPSTAIRS (value 2)
+WALKING_DOWNSTAIRS (value 3)
+SITTING (value 4)
+STANDING (value 5)
+LAYING (value 6)

@@ -38,7 +38,8 @@ featuresnamessub<-featuresnamesdata$V2[grep("mean\\(\\)|std\\(\\)", featuresname
 selectednames<-c(as.character(featuresnamessub), "subject", "activity" )
 Data<-subset(Data,select=selectednames)
 
-activitylabels <- read.table(file.path(path_rf, "activity_labels.txt"),header = FALSE)
+activitylabels <- read.table(file.path(path_rf, "activity_labels.txt"), header = FALSE)
+activitydata$activity <- factor(activitydata$activity, labels = activitylabels$V2)
 
 names(Data)<-gsub("^t", "time", names(Data))
 names(Data)<-gsub("^f", "frequency", names(Data))
@@ -51,4 +52,6 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
 library(plyr);
 Data2<-aggregate(. ~subject + activity, Data, mean)
 Data2<-Data2[order(Data2$subject,Data2$activity),]
-write.table(Data2, file = "tidydata.txt",row.name=FALSE)
+Data2$activity <- factor(Data2$activity, labels = activitylabels$V2)
+Data2
+write.table(Data2, file = "tidydata.txt",row.name=FALSE, quote = FALSE)
